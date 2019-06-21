@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/meizi_item_big"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:paddingBottom="6dp">
+
+    <ImageView
+        android:id="@+id/meizi_item_big_image"
+        android:layout_width="0dp"
+        android:layout_height="200dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="10dp"
+        android:scaleType="centerCrop"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/meizi" />
+
+    <TextView
+        android:id="@+id/meizi_item_big_title"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="10dp"
+        android:text="I'm Olivia. Long time no see, do you miss me?"
+        android:textColor="@color/black"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/meizi_item_big_image" />
+
+    <ImageView
+        android:id="@+id/meizi_item_big_name_icon"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="4dp"
+        android:layout_marginBottom="10dp"
+        android:tint="@color/colorAccent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/meizi_item_big_title"
+        app:srcCompat="@drawable/ic_person" />
+
+    <TextView
+        android:id="@+id/meizi_item_big_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:text="Olivia"
+        app:layout_constraintBottom_toBottomOf="@+id/meizi_item_big_name_icon"
+        app:layout_constraintStart_toEndOf="@+id/meizi_item_big_name_icon"
+        app:layout_constraintTop_toTopOf="@+id/meizi_item_big_name_icon" />
+
+    <ImageView
+        android:id="@+id/meizi_item_big_favorites_icon"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="4dp"
+        android:tint="@color/colorAccent"
+        app:layout_constraintStart_toEndOf="@+id/meizi_item_big_name"
+        app:layout_constraintTop_toBottomOf="@+id/meizi_item_big_title"
+        app:srcCompat="@drawable/ic_favorite" />
+
+    <TextView
+        android:id="@+id/meizi_item_big_favorites"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:text="8837"
+        app:layout_constraintBaseline_toBaselineOf="@+id/meizi_item_big_name"
+        app:layout_constraintStart_toEndOf="@+id/meizi_item_big_favorites_icon" />
+
+    <ImageView
+        android:id="@+id/meizi_item_big_comments_icon"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="5dp"
+        android:tint="@color/colorAccent"
+        app:layout_constraintStart_toEndOf="@+id/meizi_item_big_favorites"
+        app:layout_constraintTop_toBottomOf="@+id/meizi_item_big_title"
+        app:srcCompat="@drawable/ic_comment" />
+
+    <TextView
+        android:id="@+id/meizi_item_big_comments"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:text="9939"
+        app:layout_constraintBaseline_toBaselineOf="@+id/meizi_item_big_favorites"
+        app:layout_constraintStart_toEndOf="@+id/meizi_item_big_comments_icon" />
+</android.support.constraint.ConstraintLayout>

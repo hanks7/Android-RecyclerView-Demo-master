@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/meizi_detial"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ImageView
+        android:id="@+id/meizi_detial_image"
+        android:layout_width="0dp"
+        android:layout_height="240dp"
+        android:scaleType="centerCrop"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/meizi" />
+
+    <TextView
+        android:id="@+id/meizi_detial_title"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        android:text="I'm the most beautiful girl in the world! Do you agree?"
+        android:textColor="@color/black"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/meizi_detial_image" />
+
+    <ImageView
+        android:id="@+id/meizi_detial_name_icon"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="8dp"
+        android:tint="@color/colorAccent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/meizi_detial_title"
+        app:srcCompat="@drawable/ic_person" />
+
+    <TextView
+        android:id="@+id/meizi_detial_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:text="Olivia"
+        android:textColor="@color/black"
+        app:layout_constraintBottom_toBottomOf="@+id/meizi_detial_name_icon"
+        app:layout_constraintStart_toEndOf="@+id/meizi_detial_name_icon"
+        app:layout_constraintTop_toTopOf="@+id/meizi_detial_name_icon" />
+
+    <ImageView
+        android:id="@+id/meizi_detial_favorites_icon"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="8dp"
+        android:tint="@color/colorAccent"
+        app:layout_constraintStart_toEndOf="@+id/meizi_detial_name"
+        app:layout_constraintTop_toBottomOf="@+id/meizi_detial_title"
+        app:srcCompat="@drawable/ic_favorite" />
+
+    <TextView
+        android:id="@+id/meizi_detial_favorites"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:text="9927"
+        android:textColor="@color/black"
+        app:layout_constraintBaseline_toBaselineOf="@+id/meizi_detial_name"
+        app:layout_constraintStart_toEndOf="@+id/meizi_detial_favorites_icon" />
+
+    <ImageView
+        android:id="@+id/meizi_detial_comments_icon"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="8dp"
+        android:tint="@color/colorAccent"
+        app:layout_constraintStart_toEndOf="@+id/meizi_detial_favorites"
+        app:layout_constraintTop_toBottomOf="@+id/meizi_detial_title"
+        app:srcCompat="@drawable/ic_comment" />
+
+    <TextView
+        android:id="@+id/meizi_detial_comments"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:text="3392"
+        android:textColor="@color/black"
+        app:layout_constraintBaseline_toBaselineOf="@+id/meizi_detial_favorites"
+        app:layout_constraintStart_toEndOf="@+id/meizi_detial_comments_icon" />
+
+    <View
+        android:id="@+id/meizi_detial_divider"
+        android:layout_width="0dp"
+        android:layout_height="1dp"
+        android:layout_marginTop="16dp"
+        android:background="?android:attr/listDivider"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/meizi_detial_favorites_icon" />
+
+    <TextView
+        android:id="@+id/meizi_detial_text"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="@color/white"
+        android:lineSpacingExtra="3sp"
+        android:nestedScrollingEnabled="true"
+        android:padding="16dp"
+        android:text="Just a small town girl, living in a lonely world…  That’s right, I’m a local girl. Born and raised. I moved away to the city for a while for work but couldn’t be happier to be back in town with a new gig and a bit more experience behind me. I absolutely love sports and am happiest when I’m outside making myself tired."
+        android:textColor="@color/black"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/meizi_detial_divider" />
+</android.support.constraint.ConstraintLayout>
