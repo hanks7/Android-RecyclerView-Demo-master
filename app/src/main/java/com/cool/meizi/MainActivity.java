@@ -31,7 +31,7 @@ public class MainActivity extends AppCompatActivity {
         RecyclerView recyclerView = findViewById(R.id.recyclerView);
         recyclerView.setAdapter(adapter);
         recyclerView.setLayoutManager(layoutManager);
-        recyclerView.addItemDecoration(new MeiziItemDecoration(2)); //设置分隔线
+        recyclerView.addItemDecoration(new MeiziItemDecoration(2)); //设置分隔线,2px
 
     }
 

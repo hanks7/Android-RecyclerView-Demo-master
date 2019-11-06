@@ -23,7 +23,7 @@ public class MeiziAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder> 
     }
 
     /**
-     * @param position 根据 位置判断是那种布局,这里返回的是布局的id, 可以随意指定int值的.
+     * @param position 根据 集合的position判断是那种布局,这里返回的是布局的id, 可以随意指定int值的.
      * @return
      */
     @Override
@@ -31,23 +31,30 @@ public class MeiziAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder> 
         return position % 3 == 0 ? R.layout.meizi_item_big : R.layout.meizi_item_small;
     }
 
-    //在这里判断是哪个布局
+
+    /**
+     * 在这里判断是哪个布局
+     *
+     * @param parent
+     * @param viewType
+     * @return
+     */
     @NonNull
     @Override
     public RecyclerView.ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
         LayoutInflater inflater = LayoutInflater.from(parent.getContext());
         if (viewType == R.layout.meizi_item_big) {
-            return new ViewHolderBig(
-                    inflater.inflate(R.layout.meizi_item_big, parent, false)
-            );
+            return new ViewHolderBig(inflater.inflate(R.layout.meizi_item_big, parent, false));
         } else {
-            return new ViewHolderSmall(
-                    inflater.inflate(R.layout.meizi_item_small, parent, false)
-            );
+            return new ViewHolderSmall(inflater.inflate(R.layout.meizi_item_small, parent, false));
         }
     }
 
-    //在这里赋值
+    /**
+     * 在这里赋值
+     * @param holder
+     * @param position
+     */
     @Override
     public void onBindViewHolder(@NonNull RecyclerView.ViewHolder holder, int position) {
         final Meizi meizi = meizis.get(position);
@@ -94,7 +101,11 @@ public class MeiziAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder> 
         }
     }
 
-    //跳转界面
+    /**
+     * 跳转界面
+     *
+     * @param meizi
+     */
     private void startMeiziActivity(Meizi meizi) {
         Intent intent = new Intent(context, MeiziDetialActivity.class);
         intent.putExtra(MeiziDetialActivity.IMAGE_URL, meizi.getImageUrl());
@@ -107,6 +118,7 @@ public class MeiziAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder> 
 
     /**
      * item总共条数
+     *
      * @return
      */
     @Override
